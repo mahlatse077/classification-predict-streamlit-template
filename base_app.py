@@ -31,6 +31,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
 # Data dependencies
 import pandas as pd
+import  numpy as np
 
 # Vectorizer
 news_vectorizer = open("resources/vect (2).pkl","rb")
