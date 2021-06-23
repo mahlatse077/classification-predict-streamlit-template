@@ -71,7 +71,7 @@ def main():
 		st.info("Prediction with ML Models")
 		# Creating a text box for user input
 
-		all_ml_model=["LR","NB"]
+		all_ml_model=["LogisticRegression","Naive_Bayes"]
 		model_choice=st.selectbox("Choose ML Model",all_ml_model)
 		prediction_labels={"Do not believe":-1,"believe but Neutral":0,"Believe":1,"Strongly Believe":2}
 		tweet_text = st.text_area("Enter Text","Type Here")
