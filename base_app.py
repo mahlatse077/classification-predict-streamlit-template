@@ -33,7 +33,7 @@ import sklearn
 import pandas as pd
 
 # Vectorizer
-news_vectorizer = open("resources/vect_fitted.pkl","rb")
+news_vectorizer = open("resources/vect (2).pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
