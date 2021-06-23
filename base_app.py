@@ -34,7 +34,7 @@ import pandas as pd
 import  numpy as np
 
 # Vectorizer
-news_vectorizer = open("resources/vect (2).pkl","rb")
+news_vectorizer = open("resources/vect_CountVector.pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
