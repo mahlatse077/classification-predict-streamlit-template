@@ -40,6 +40,11 @@ tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl f
 # Load your raw data
 raw = pd.read_csv("resources/train.csv")
 
+#load our models here
+def get_keys(val,my_dict):
+	for key,value in my_dict.items():
+		if val == value:
+			return key
 # The main function where we will build the actual app
 def main():
 	"""Tweet Classifier App with Streamlit """
@@ -84,6 +89,12 @@ def main():
 				predictor=joblib.load(open(os.path.join("resources/logreg(1).pkl"),"rb"))
 				prediction = predictor.predict(vect_text)
 				st.write(prediction)
+				final_result=get_keys(prediction,prediction_labels)
+			if model_choice =="Naive_Bayes":
+				predictor=joblib.load(open(os.path.join("resources/naive_bayes(1).pkl"),"rb"))
+				prediction = predictor.predict(vect_text)
+				st.write(prediction)
+				final_result=get_keys(prediction,prediction_labels)
 			#vect_tweet = tweet_cv.sklearn.transform(tweet_text).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
@@ -93,7 +104,7 @@ def main():
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			st.success("Text Categorized as: {}".format(prediction))
+			#st.success("Text Categorized as: {}".format(prediction))
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
