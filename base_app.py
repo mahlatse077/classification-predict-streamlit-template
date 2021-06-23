@@ -79,11 +79,15 @@ def main():
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
 			vect_text = tweet_cv.transform([tweet_text]).toarray()
+			if model_choice =="LogisticRegression":
+				predictor=joblib.load(open(os.path.join("resources/logreg(1).pkl"),"rb"))
+				prediction = predictor.predict(vect_text)
+				st.write(prediction)
 			#vect_tweet = tweet_cv.sklearn.transform(tweet_text).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
-			predictor = joblib.load(open(os.path.join("resources/logreg(1).pkl"),"rb"))
-			prediction = predictor.predict(vect_text)
+			#predictor = joblib.load(open(os.path.join("resources/logreg(1).pkl"),"rb"))
+			#prediction = predictor.predict(vect_text)
 
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
