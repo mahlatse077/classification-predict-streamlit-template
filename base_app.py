@@ -23,15 +23,15 @@
 """
 # Streamlit dependencies
 import streamlit as st
-import joblib,os
+import joblib
+import os
 
-import streamlit as st
 
 # Data dependencies
 import pandas as pd
 
 # Vectorizer
-news_vectorizer = open("resources/vect.pkl","rb")
+news_vectorizer = open("resources/tfidfvect.pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
 
 # Load your raw data
