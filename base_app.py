@@ -25,6 +25,7 @@
 
 import streamlit as st
 import joblib, os
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
 
 # Data dependencies
