@@ -22,9 +22,9 @@
 
 """
 # Streamlit dependencies
+
 import streamlit as st
-import joblib
-import os
+import joblib, os
 
 
 # Data dependencies
