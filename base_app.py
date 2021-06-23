@@ -26,7 +26,7 @@
 import streamlit as st
 import joblib, os
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-import sklearn
+
 
 
 # Data dependencies
@@ -71,8 +71,8 @@ def main():
 
 		if st.button("Classify"):
 			# Transforming user input with vectorizer
-			#vect_text = tweet_cv.transform([tweet_text]).toarray()
-			vect_tweet = tweet_cv.sklearn.transform(tweet_text).toarray()
+			vect_text = tweet_cv.transform([tweet_text]).toarray()
+			#vect_tweet = tweet_cv.sklearn.transform(tweet_text).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
 			predictor = joblib.load(open(os.path.join("resources/LogisticRegression.pkl"),"rb"))
