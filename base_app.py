@@ -125,8 +125,14 @@ def main():
           #building the section for Natural processing space
 
 	if	selection == "Visuals":
+		st.markdown("The visual below show our EDA in this project")
+		st.markdown("wordcloud show the most frequest word used in the text")
 		image=Image.open('resources/imgs/wordcloud.png')
 		st.image(image,caption='caption below image')
+
+		st.markdown("The bargraph below show the most frequest Hashtags in the tweet")
+		image=Image.open('resources/imgs/frequent_hashtags.png')
+		st.image(image,caption='caption below imgae')
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
