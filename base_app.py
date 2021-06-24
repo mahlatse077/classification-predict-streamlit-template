@@ -124,7 +124,7 @@ def main():
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
           #building the section for Natural processing space
 
-	if	selection == "Prediction":
+	if	selection == "Natural Language":
 		image=Image.open('resources/imgs/cloudword.png')
 		st.image(image,caption='caption below image')
 
