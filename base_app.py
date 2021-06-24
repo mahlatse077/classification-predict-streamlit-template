@@ -122,7 +122,7 @@ def main():
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
-#building the section for Natural processing space
+          #building the section for Natural processing space
 
 	if selection == "Natural Language":
 		image = Image.open('resources\imgs\wordcloud.png')
