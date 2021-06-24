@@ -43,7 +43,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
-#import spacy
+import spacy
 #nlp=TextBlob.load("en")
 
 # Vectorizer
