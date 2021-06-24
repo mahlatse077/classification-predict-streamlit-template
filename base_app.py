@@ -87,7 +87,7 @@ def main():
 		st.subheader("Raw Twitter data and label")
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
-    
+
 	# Building out the predication page
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
@@ -124,7 +124,10 @@ def main():
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
           #building the section for Natural processing space
 
-		  
+	if	selection == "Prediction":
+		image=Image.open('resources/imgs/cloudword.png')
+		st.image(image,caption='caption below image')
+
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 	main()
