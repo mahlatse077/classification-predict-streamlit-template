@@ -35,6 +35,7 @@ import pandas as pd
 import  numpy as np
 
 #NLP Pkgs
+from PIL import Image
 from textblob import TextBlob
 from nltk import pos_tag
 import re
@@ -43,7 +44,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
-import spacy
+#import spacy
 #nlp=TextBlob.load("en")
 
 # Vectorizer
@@ -124,18 +125,8 @@ def main():
 #building the section for Natural processing space
 
 	if selection == "Natural Language":
-		st.info("Natural Lanuage Processing")
-		tweet_text = st.text_area("Enter Text","Type Here")
-		nlp_task=["Tokenization","NER","Lemmatization"]
-		task_choice=st.selectbox("Choose NLP Task",nlp_task)
-		if st.button("Analyze"):
-			st.info("Original Text".format(tweet_text))
-
-			#docx =nlp(tweet_text)
-			blob = TextBlob(tweet_text)
-			if task_choice =="Tokenization":
-				result =[blob.tags]
-				st.json(result)
+		image = Image.open('resources\imgs\wordcloud.png')
+        st.image(image, caption='caption below image')
             
 			#elif task_choice == "Lemmatization":
 				 #result = [" 'Token':{},'Lemma':{}".format(token.text,token.lemma) for token in blob]
