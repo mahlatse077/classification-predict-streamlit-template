@@ -124,16 +124,7 @@ def main():
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
           #building the section for Natural processing space
 
-	if selection == "Natural Language":
-		image = Image.open('resources\imgs\wordcloud.png')
-        st.image(image, caption='caption below image')
-            
-			#elif task_choice == "Lemmatization":
-				 #result = [" 'Token':{},'Lemma':{}".format(token.text,token.lemma) for token in blob]
-            #elif task_choice == "NER":
-                  #result
-            
-		
+		  
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 	main()
