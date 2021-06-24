@@ -141,7 +141,7 @@ def main():
 				 #result = [" 'Token':{},'Lemma':{}".format(token.text,token.lemma) for token in blob]
             #elif task_choice == "NER":
                   #result
-	        st.image("resources/imgs/earth-blue-planet-globe-planet-41953.jpeg")
+            
 		
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
