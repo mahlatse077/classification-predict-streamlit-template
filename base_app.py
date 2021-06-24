@@ -91,13 +91,15 @@ def main():
 			if model_choice =="LogisticRegression":
 				predictor=joblib.load(open(os.path.join("resources/logreg(1).pkl"),"rb"))
 				prediction = predictor.predict(vect_text)
-				st.write(prediction)
-				final_result=get_keys(prediction,prediction_labels)
+				#st.write(prediction)
+				#final_result=get_keys(prediction,prediction_labels)
 			if model_choice =="Naive_Bayes":
 				predictor=joblib.load(open(os.path.join("resources/naive_bayes (1).pkl"),"rb"))
 				prediction = predictor.predict(vect_text)
+
 				st.write(prediction)
-				final_result=get_keys(prediction,prediction_labels)
+			final_result=get_keys(prediction,prediction_labels)
+			st.success("Text Categorized as: {}".format(get_keys(final_result)))
 			#vect_tweet = tweet_cv.sklearn.transform(tweet_text).toarray()
 			# Load your .pkl file with the model of your choice + make predictions
 			# Try loading in multiple models to give the user a choice
@@ -107,7 +109,7 @@ def main():
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
+			#st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
