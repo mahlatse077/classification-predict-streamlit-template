@@ -56,7 +56,7 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Prediction", "Information","Natural Language Process"]
+	options = ["Prediction", "Information","Natural Language"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
 	# Building out the "Information" page
@@ -107,7 +107,7 @@ def main():
 			# When model has successfully run, will print prediction
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
-			st.success("Text Categorized as: {}".format(get_keys(final_result))
+			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
