@@ -134,6 +134,15 @@ def main():
 		image=Image.open('resources/imgs/frequent_hashtags.png')
 		st.image(image,caption='caption below imgae')
 
+		st.markdown("THOSE WHO STRONGLY BELIEVE ")
+		image=Image.open('resources/imgs/hashtag_sentiment_two.png')
+		st.image(image,caption='caption below imgae')
+
+		st.markdown("THOSE WHO DO NOT BELIEVE ")
+		image=Image.open('resources/imgs/hashtag_sentiment_neg.png')
+		st.image(image,caption='caption below imgae')
+
+
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 	main()
