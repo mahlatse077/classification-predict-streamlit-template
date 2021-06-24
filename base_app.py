@@ -27,7 +27,8 @@ import streamlit as st
 import joblib, os
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
-
+#
+from PIL import Image
 
 # Data dependencies
 import pandas as pd
@@ -128,7 +129,9 @@ def main():
 			if task_choice =="Tokenization":
 				result =[token for token in blob]
 				st.json(result)
-
+             
+	    
+		image = Image.open('resources/imgs/Tweeter.png')
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 	main()
