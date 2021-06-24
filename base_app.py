@@ -139,7 +139,7 @@ def main():
 		st.image(image,caption='caption below imgae')
 
 		st.markdown("THOSE WHO DO NOT BELIEVE ")
-		image=Image.open('resources/imgs/hashtag_sentiment_neg.png')
+		image=Image.open('resources/imgs/hashtags_sentiment_neg.png')
 		st.image(image,caption='caption below imgae')
 
 
