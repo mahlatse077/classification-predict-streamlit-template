@@ -36,7 +36,7 @@ import  numpy as np
 #NLP Pkgs
 from textblob import TextBlob
 #import spacy
-nlp=TextBlob.load("en")
+#nlp=TextBlob.load("en")
 
 # Vectorizer
 news_vectorizer = open("resources/vect_CountVector(1).pkl","rb")
@@ -123,9 +123,10 @@ def main():
 		if st.button("Analyze"):
 			st.info("Original Text".format(tweet_text))
 
-			docx =nlp(tweet_text)
+			#docx =nlp(tweet_text)
+			blob = TextBlob(tweet_text)
 			if task_choice =="Tokenization":
-				result =[ token.text for token in docx]
+				result =[ token.text for token in blob]
 				st.json(result)
 
 # Required to let Streamlit instantiate our web app.  
