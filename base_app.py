@@ -65,7 +65,7 @@ def main():
 
 
 		# You can read a markdown file from supporting resources folder
-		st.markdown("Some information here the world is heating up here ")
+	
 		st.markdown("Climate change is already and is going to continue to be the issue (crisis) of our time. The coronavirus pandemic has only further highlighted just how massive of an issue climate change is going to become in the next few decades.")
 		st.markdown("Thus, businesses looking to grow and succeed in this new normal, and in a turbulent economic environment, need to be acutely aware of the causes and symptoms of climate change. ")
 		st.markdown("This can be done by better understanding the sentiment of people in general towards climate change. Essentially if companies can effectively tailor their marketing and branding efforts to suit their audience then it could bode very well for their business sustainability and ensure they grow a loyal customer base.")
