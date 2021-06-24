@@ -33,6 +33,10 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 import pandas as pd
 import  numpy as np
 
+#NLP Pkgs
+import spacy
+nlp=spacy.load("en")
+
 # Vectorizer
 news_vectorizer = open("resources/vect_CountVector(1).pkl","rb")
 tweet_cv = joblib.load(news_vectorizer) # loading your vectorizer from the pkl file
@@ -58,7 +62,7 @@ def main():
 	# you can create multiple pages this way
 	options = ["Prediction", "Information","Natural Language"]
 	selection = st.sidebar.selectbox("Choose Option", options)
-
+   
 	# Building out the "Information" page
 	if selection == "Information":
 		st.info("General Information")
@@ -73,7 +77,7 @@ def main():
 		st.subheader("Raw Twitter data and label")
 		if st.checkbox('Show raw data'): # data is hidden if box is unchecked
 			st.write(raw[['sentiment', 'message']]) # will write the df to the page
-
+    
 	# Building out the predication page
 	if selection == "Prediction":
 		st.info("Prediction with ML Models")
@@ -108,6 +112,20 @@ def main():
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
+#building the section for Natural processing space
+
+	if selection == "Natural Language":
+		st.info("Natural Lanuage Processing")
+		tweet_text = st.text_area("Enter Text","Type Here")
+		nlp_task=["Tokenization","NER","Lemmatization"]
+		task_choice=st.selectbox("Choose NLP Task",nlp_task)
+		if st.button("Analyze"):
+			st.info("Original Text".format(tweet_text))
+
+			docx =nlp(tweet_text)
+			if task_choice =="Tokenization":
+				result =[ token.text for token in docx]
+				st.json(result)
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
