@@ -70,7 +70,7 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Prediction", "Information","Natural Language"]
+	options = ["Prediction", "Information","Visuals"]
 	selection = st.sidebar.selectbox("Choose Option", options)
    
 	# Building out the "Information" page
@@ -124,7 +124,7 @@ def main():
 			st.success("Text Categorized as: {}".format(get_keys(prediction,prediction_labels)))
           #building the section for Natural processing space
 
-	if	selection == "Natural Language":
+	if	selection == "visuals":
 		image=Image.open('resources/imgs/wordcloud.png')
 		st.image(image,caption='caption below image')
 
