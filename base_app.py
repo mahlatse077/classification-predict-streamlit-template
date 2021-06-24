@@ -36,6 +36,13 @@ import  numpy as np
 
 #NLP Pkgs
 from textblob import TextBlob
+from nltk import pos_tag
+import re
+from nltk.corpus import stopwords
+from nltk.stem.wordnet import WordNetLemmatizer
+from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
 #import spacy
 #nlp=TextBlob.load("en")
 
@@ -127,11 +134,15 @@ def main():
 			#docx =nlp(tweet_text)
 			blob = TextBlob(tweet_text)
 			if task_choice =="Tokenization":
-				result =[token for token in blob]
+				result =[token.text for token in blob]
 				st.json(result)
-             
+            
+			#elif task_choice == "Lemmatization":
+				 #result = [" 'Token':{},'Lemma':{}".format(token.text,token.lemma) for token in blob]
+            #elif task_choice == "NER":
+                  #result
 	    
-		image = Image.open('resources/imgs/Tweeter.png')
+		
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
 	main()
