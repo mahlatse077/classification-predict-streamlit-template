@@ -91,7 +91,7 @@ def main():
 				st.write(prediction)
 				final_result=get_keys(prediction,prediction_labels)
 			if model_choice =="Naive_Bayes":
-				predictor=joblib.load(open(os.path.join("resources/naive_bayes(1).pkl"),"rb"))
+				predictor=joblib.load(open(os.path.join("resources/naive_bayes (1).pkl"),"rb"))
 				prediction = predictor.predict(vect_text)
 				st.write(prediction)
 				final_result=get_keys(prediction,prediction_labels)
