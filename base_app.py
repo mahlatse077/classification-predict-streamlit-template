@@ -125,7 +125,7 @@ def main():
           #building the section for Natural processing space
 
 	if	selection == "Natural Language":
-		image=Image.open('resources/imgs/cloudword.png')
+		image=Image.open('resources/imgs/wordcloud.png')
 		st.image(image,caption='caption below image')
 
 # Required to let Streamlit instantiate our web app.  
