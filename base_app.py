@@ -34,8 +34,9 @@ import pandas as pd
 import  numpy as np
 
 #NLP Pkgs
-import spacy
-nlp=spacy.load("en")
+from textblob import TextBlob
+#import spacy
+nlp=TextBlob.load("en")
 
 # Vectorizer
 news_vectorizer = open("resources/vect_CountVector(1).pkl","rb")
