@@ -126,7 +126,7 @@ def main():
 			#docx =nlp(tweet_text)
 			blob = TextBlob(tweet_text)
 			if task_choice =="Tokenization":
-				result =[token.tweet_text for token in blob]
+				result =[token for token in blob]
 				st.json(result)
 
 # Required to let Streamlit instantiate our web app.  
