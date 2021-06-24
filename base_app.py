@@ -36,7 +36,7 @@ import  numpy as np
 
 #NLP Pkgs
 from PIL import Image
-from textblob import TextBlob
+
 from nltk import pos_tag
 import re
 from nltk.corpus import stopwords
