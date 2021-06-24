@@ -134,7 +134,7 @@ def main():
 			#docx =nlp(tweet_text)
 			blob = TextBlob(tweet_text)
 			if task_choice =="Tokenization":
-				result =[blob]
+				result =[blob.tags]
 				st.json(result)
             
 			#elif task_choice == "Lemmatization":
