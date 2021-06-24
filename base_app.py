@@ -127,7 +127,7 @@ def main():
 			blob = TextBlob(tweet_text)
 			blob.noun_phrases
 			if task_choice =="Tokenization":
-				result =[ sentence for sentence in blob.sentences]
+				result =[token for token in blob]
 				st.json(result)
 
 # Required to let Streamlit instantiate our web app.  
