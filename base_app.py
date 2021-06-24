@@ -124,7 +124,8 @@ def main():
 			st.info("Original Text".format(tweet_text))
 
 			#docx =nlp(tweet_text)
-			blob = TextBlob(tweet_text).tags
+			blob = TextBlob(tweet_text)
+			blob.noun_phrases
 			if task_choice =="Tokenization":
 				result =[token for token in blob]
 				st.json(result)
